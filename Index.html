@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recharge Service</title>
+    <style>
+        /* Basic Styles for Layout */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        /* Image Slider */
+        .slider {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+            margin-top: -5px; /* Reduced gap */
+        }
+
+        .slider-container {
+            display: flex;
+            transition: transform 1s ease-in-out;
+        }
+
+        .slider-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Container for Image, Logos, Mobile Input, and Recharge Button */
+        .content-box {
+            background-color: #ffffff;
+            padding: 10px; /* Further reduced padding */
+            margin-top: -5px; /* Further reduced gap */
+            border-radius: 10px;
+            border: 2px solid black;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            margin: 10px auto; /* Reduced margin */
+            max-width: 800px;
+            box-sizing: border-box;
+        }
+
+        /* New Image Added at the Top */
+        .top-image {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 0;
+        }
+
+        .top-image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Logo Images */
+        .logo-images {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px; /* Reduced space */
+        }
+
+        .logo-images img {
+            width: 40px;
+            height: auto;
+            margin: 5px;
+        }
+
+        .logo-images .circle {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: 2px solid #000;
+            margin-top: 5px;
+            margin-left: 5px; /* Reduced margin */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .logo-images .circle:hover {
+            background-color: #0072ff;
+        }
+
+        .logo-images .circle.active {
+            background-color: #00c6ff;
+            border-color: #005bb5;
+        }
+
+        /* Mobile Number Input Box */
+        .mobile-input-container {
+            text-align: center;
+            margin-top: 10px; /* Reduced margin */
+        }
+
+        .mobile-input-box {
+            padding: 8px; /* Reduced padding */
+            width: 80%;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .mobile-input-box::placeholder {
+            color: #888;
+        }
+
+        /* Recharge Button */
+        .recharge-button {
+            background: linear-gradient(45deg, #00c6ff, #0072ff);
+            color: white;
+            padding: 8px 16px; /* Reduced padding */
+            font-size: 14px; /* Reduced font size */
+            font-weight: bold;
+            border: none;
+            border-radius: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .recharge-button:hover {
+            background: linear-gradient(45deg, #0072ff, #00c6ff);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Image Section below the Recharge Button */
+        .image-section img {
+            width: 80%;
+            max-width: 250px;
+            margin: 5px auto;
+            display: block;
+        }
+
+        /* Image Between Input Box and Recharge Button */
+        .image-between img {
+            width: 70%;
+            max-width: 200px;
+            display: block;
+            margin: 10px auto; /* Reduced margin */
+        }
+
+        /* Image added above the Sims Logos */
+        .new-image img {
+            width: 90%;
+            max-width: 400px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Responsive Design for Mobile Devices */
+        @media (max-width: 768px) {
+            .slider {
+                height: 250px;
+            }
+
+            .content-box {
+                width: 90%;
+                padding: 10px;
+                margin: 10px 5%;
+            }
+
+            .logo-images {
+                justify-content: space-between;
+            }
+
+            .logo-images img {
+                width: 35px;
+            }
+
+            .mobile-input-box {
+                font-size: 12px;
+                padding: 8px;
+            }
+
+            .recharge-button {
+                font-size: 14px;
+                padding: 10px 15px;
+            }
+
+            .image-section img,
+            .image-between img,
+            .new-image img {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top-image">
+            <img src="https://i.imghippo.com/files/rsp2631ado.jpg" alt="Top Image">
+        </div>
+        <div class="slider">
+            <div class="slider-container">
+                <img src="https://i.imghippo.com/files/qTF2875Mzk.jpg" alt="Image 1">
+                <img src="https://i.imghippo.com/files/cOVd6836hWI.jpg" alt="Image 2">
+                <img src="https://i.imghippo.com/files/IkmP5328RMk.jpg" alt="Image 3">
+            </div>
+        </div>
+        <div class="content-box">
+            <div class="new-image">
+                <img src="https://i.imghippo.com/files/Gxf8212PAU.jpg" alt="New Image Above Sims Logos">
+            </div>
+            <div class="logo-images">
+                <div class="logo-item">
+                    <img src="https://i.imghippo.com/files/KQ7093ic.png" alt="Jio Logo">
+                    <div class="circle" onclick="toggleActive(this)"></div>
+                </div>
+                <div class="logo-item">
+                    <img src="https://i.imghippo.com/files/LjyC2703TBg.png" alt="Airtel Logo">
+                    <div class="circle" onclick="toggleActive(this)"></div>
+                </div>
+                <div class="logo-item">
+                    <img src="https://i.imghippo.com/files/Fcbm5956Hp.png" alt="Vi Logo">
+                    <div class="circle" onclick="toggleActive(this)"></div>
+                </div>
+                <div class="logo-item">
+                    <img src="https://i.imghippo.com/files/tLa6982gP.png" alt="BSNL Logo">
+                    <div class="circle" onclick="toggleActive(this)"></div>
+                </div>
+            </div>
+            <div class="mobile-input-container">
+                <input type="text" class="mobile-input-box" placeholder="Enter your 10-digit mobile number">
+            </div>
+            <div class="image-between">
+                <img src="https://i.imghippo.com/files/TDn5473maA.jpg" alt="Image Between">
+            </div>
+            <!-- Updated Recharge Button Section -->
+            <a href="plan.html">
+                <div class="recharge-button">
+                    Recharge Now
+                </div>
+            </a>
+        </div>
+        <div class="new-image">
+            <img src="https://i.imghippo.com/files/vVsS1210MDU.jpg" alt="">
+        </div>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        function showSlides() {
+            const slides = document.querySelectorAll('.slider-container img');
+            slideIndex++;
+            if (slideIndex >= slides.length) slideIndex = 0;
+            document.querySelector('.slider-container').style.transform = `translateX(-${slideIndex * 100}%)`;
+        }
+        setInterval(showSlides, 3000);
+
+        // Function to handle sim selection and keep it active
+        function toggleActive(element) {
+            const circles = document.querySelectorAll('.circle');
+            circles.forEach(circle => circle.classList.remove('active')); // Remove active class from all
+            element.classList.add('active'); // Add active class to clicked circle
+        }
+    </script>
+</body>
+</html>
